@@ -57,7 +57,7 @@ const Reset = createGlobalStyle`
     html,
     body {
         font-size: 16px;
-        font-family: 'Nunito Sans', sans-serif;
+        font-family: 'Arimo', sans-serif;
     }
     *,
     *::before,

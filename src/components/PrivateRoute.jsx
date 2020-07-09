@@ -20,7 +20,3 @@ function PrivateRoute({ component: RouteComponent, ...rest }) {
 }
 
 export default PrivateRoute
-
-
-
-// private route to wrapper wokol docelowego route

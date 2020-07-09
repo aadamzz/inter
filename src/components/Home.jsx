@@ -1,6 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import Loader from './Loader';
-import app from '../base';
+import Header from './Header/Header';
+import NewPost from './NewPost/NewPost';
+import Posts from './Posts/Posts';
+
+const Main = styled.main`
+    max-width: 100vw;
+    min-height: 100vh;
+`;
 
 function PrivateComponents() {
     const [loader, setLoader] = useState(true);
@@ -10,12 +18,12 @@ function PrivateComponents() {
     }, [])
 
     if (loader) return <Loader />
-
     return (
-        <div>
-            <h1>This is home</h1>
-            <button onClick={() => app.auth().signOut()}>Log out</button>
-        </div>
+        <Main>
+            <Header />
+            <NewPost />
+            <Posts />
+        </Main>
     );
 };
 
